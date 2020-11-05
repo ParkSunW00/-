@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".timetableActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="시간표 수정"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="30sp">
+
+    </TextView>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#FFC107"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="20"
+                android:text="월"
+                android:textColor="#000000"></TextView>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#FFC107"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="20"
+                android:text="화"
+                android:textColor="#000000"></TextView>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#FFC107"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="20"
+                android:text="수"
+                android:textColor="#000000"></TextView>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#FFC107"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="20"
+                android:text="목"
+                android:textColor="#000000"></TextView>
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#FFC107"
+                android:gravity="center"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="20"
+                android:text="금"
+                android:textColor="#000000"></TextView>
+
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/table_0_0"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_0_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_0_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_0_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_0_4"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/table_1_0"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_1_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_1_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_1_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_1_4"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/table_2_0"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_2_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_2_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_2_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_2_4"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/table_3_0"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_3_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_3_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_3_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_3_4"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/table_4_0"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_4_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_4_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_4_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_4_4"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/table_5_0"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_5_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_5_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_5_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_5_4"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+        </TableRow>
+
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/table_6_0"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_6_1"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_6_2"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_6_3"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:gravity="center"></EditText>
+
+            <EditText
+                android:id="@+id/table_6_4"
+                android:layout_width="80dp"
+                android:layout_height="40sp"
+                android:background="#CDDC39"
+                android:gravity="center"></EditText>
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/modifyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:background="#03A9F4"
+        android:bufferType="normal"
+        android:text="돌아가기"
+        android:textColor="#000000" />
+
+</LinearLayout>
