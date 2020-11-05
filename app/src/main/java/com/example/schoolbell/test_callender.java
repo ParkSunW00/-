@@ -132,6 +132,7 @@ public class test_callender extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
     @SuppressLint("WrongConstant")
     public void removeDiary(String readDay){
         FileOutputStream fos=null;

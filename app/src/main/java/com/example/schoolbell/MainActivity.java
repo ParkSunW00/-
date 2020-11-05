@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,13 +18,27 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
-        RecyclerView recyclerView=findViewById(R.id.recyclerview);
 
         alram=findViewById(R.id.gotoAlarm);
         assign=findViewById(R.id.gotocheckList);
         timetable=findViewById(R.id.gotoTimeTable);
+
+        alram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),AlramActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        assign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Assignment.class);
+                startActivity(intent);
+            }
+        });
 
         timetable.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,26 +48,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        RecyclerView recyclerView1=findViewById(R.id.recyclerview1);
+
         LinearLayoutManager layoutManager=new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
-        recyclerView.setLayoutManager(layoutManager);
+        recyclerView1.setLayoutManager(layoutManager);
 
-        final Adapter adapter=new Adapter();
+        final CardAdapter cardAdapter =new CardAdapter();
 
-        adapter.addItem(new Card("온라인클래스"));
-        adapter.addItem(new Card("구글클래스룸"));
-        adapter.addItem(new Card("101클래스"));
-        adapter.addItem(new Card("클래스카드 "));
+        cardAdapter.addItem(new CardActivity("온라인클래스"));
+        cardAdapter.addItem(new CardActivity("구글클래스룸"));
+        cardAdapter.addItem(new CardActivity("101클래스"));
+        cardAdapter.addItem(new CardActivity("클래스카드 "));
 
-        recyclerView.setAdapter(adapter);
+        recyclerView1.setAdapter(cardAdapter);
 
-        adapter.setOnItemClickListener(new OnCardItemClickListener() {
+        cardAdapter.setOnItemClickListener(new OnCardItemClickListener() {
             @Override
-            public void onItemClick(Adapter.ViewHolder holder, View view, int position) {
+            public void onItemClick(CardAdapter.ViewHolder holder, View view, int position) {
                 Intent intent = new Intent(MainActivity.this,test_callender.class);
                 startActivity(intent);
             }
         });
-
 
     }
 

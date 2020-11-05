@@ -3,6 +3,7 @@ package com.example.schoolbell;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,24 +11,24 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements OnCardItemClickListener{
+public class AssignAdapter extends RecyclerView.Adapter<AssignAdapter.ViewHolder> implements OnAssignItemClickListener {
 
-    ArrayList<Card> items = new ArrayList<>();
+    ArrayList<AssignmentActivity> items = new ArrayList<>();
 
-    OnCardItemClickListener listener;
+    OnAssignItemClickListener listener;
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater=LayoutInflater.from(parent.getContext());
-        View itemView =inflater.inflate(R.layout.activity_card_item,parent,false);
+        View itemView =inflater.inflate(R.layout.activity_assignment_item,parent,false);
 
         return new ViewHolder(itemView,this);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Card item = items.get(position);
+        AssignmentActivity item = items.get(position);
         holder.setItem(item);
     }
 
@@ -37,12 +38,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
     }
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textView1;
 
-        public ViewHolder (View view, final OnCardItemClickListener listener) {
+        TextView assign1;
+        TextView viewday1;
+
+        public ViewHolder (View view, final OnAssignItemClickListener listener) {
             super (view);
 
-            textView1=itemView.findViewById(R.id.title);
+            assign1=itemView.findViewById(R.id.assign1);
+            viewday1=itemView.findViewById(R.id.viewday);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -56,16 +60,18 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
             });
         }
 
-        public void setItem (Card item) {
-            textView1.setText(item.getTitle());
+        public void setItem (AssignmentActivity item) {
+            viewday1.setText(item.getViewday());
+            assign1.setText(item.getContent());
         }
-    }
-    public void addItem(Card item) {items.add(item);}
-    public void setItem(ArrayList<Card> items) {this.items=items;}
-    public Card getItem(int position) {return items.get(position);}
-    public void setItem (int position, Card item) {items.set(position,item);}
 
-    public void setOnItemClickListener (OnCardItemClickListener listener) {
+    }
+    public void addItem(AssignmentActivity item) {items.add(item);}
+    public void setItem(ArrayList<AssignmentActivity> items) {this.items=items;}
+    public AssignmentActivity getItem(int position) {return items.get(position);}
+    public void setItem (int position, AssignmentActivity item) {items.set(position,item);}
+
+    public void setOnItemClickListener (OnAssignItemClickListener listener) {
         this.listener=listener;
     }
 
@@ -73,5 +79,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> implements
         if(listener!=null) {
             listener.onItemClick(holder,view,position);
         }
-    }
 }
+}
+

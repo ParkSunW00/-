@@ -1,10 +1,10 @@
 package com.example.schoolbell;
 
-public class Card {
+public class CardActivity {
 
     String title;
 
-    public Card(String title) {
+    public CardActivity(String title) {
         this.title = title;
     }
     public String getTitle() {
