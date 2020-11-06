@@ -57,14 +57,14 @@ public class AlarmReceiver extends BroadcastReceiver {
                 .setWhen(System.currentTimeMillis())
 
                 .setTicker("{Time to watch some cool stuff!}")
-                .setContentTitle("상태바 드래그시 보이는 타이틀")
-                .setContentText("상태바 드래그시 보이는 서브타이틀")
+                .setContentTitle("Title")
+                .setContentText("SubTitle")
                 .setContentInfo("INFO")
                 .setContentIntent(pendingI);
 
         if (notificationManager != null) {
 
-            notificationManager.notify(1234, builder.build());
+            notificationManager.notify(100, builder.build());
 
             Calendar nextNotifyTime = Calendar.getInstance();
 

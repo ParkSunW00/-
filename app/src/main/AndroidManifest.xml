@@ -14,17 +14,12 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".Assignment"></activity>
-        <activity android:name=".Assignment_item" />
         <activity android:name=".AlramActivity" />
         <activity android:name=".timetableActivity" />
         <activity android:name=".ModifyTimetableActivity" />
         <activity android:name=".test_callender" />
-        <activity android:name=".Card_item" />
-        <activity android:name=".CardAdapter" />
-        <activity
-            android:name=".IntroThread"
-            tools:ignore="Instantiatable" />
         <activity android:name=".MainActivity"> </activity>
         <activity android:name=".IntroActivity">
             <intent-filter>
